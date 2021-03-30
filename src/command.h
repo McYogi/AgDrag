@@ -198,8 +198,7 @@ public:
   bool                RemoveVariable ( const char*   szVariable );
 
 
-  eTB_CommandResult ProcessCommandLine      (const char* szCommandLine);
-  eTB_CommandResult ProcessCommandFormatted (const char* szCommandFormat, ...);
+  eTB_CommandResult ProcessCommandLine (const char* szCommandLine);
 
 
 protected:
@@ -211,9 +210,6 @@ private:
 };
 
 
-typedef eTB_CommandProcessor* (__stdcall *SK_GetCommandProcessor_pfn)(void);
-extern SK_GetCommandProcessor_pfn SK_GetCommandProcessor;
-
-//extern eTB_CommandProcessor command;
+extern eTB_CommandProcessor command;
 
 #endif /* __EPSILON_TESTBED__COMMAND_H */
